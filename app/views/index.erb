@@ -1,6 +1,24 @@
-<h1>All Tasks</h1>
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>All Tasks</title>
+        <link href='css/bootstrap.css' rel='stylesheet'>
+    </head>
+    <body>
+      <div class='jumbotron'>
+      <h2 id='title'>All Tasks</h2>
 
-<% @tasks.each do |task| %>
-  <h3><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-  <p><%= task.description %></p>
-<% end %>
+        <div class='row'>
+
+            <% @tasks.each do |task| %>
+                <h3>
+                    <a class='col-md-6' href="/tasks/<%= task.id %>"><%= task.title %></a>
+                </h3>
+                <p><%= task.description %></p>
+            <% end %>
+            <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script src='js/bootstrap.js'></script>
+        </div>
+      </div> 
+    </body>
